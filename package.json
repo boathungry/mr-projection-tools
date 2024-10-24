@@ -1,0 +1,20 @@
+{
+  "name": "com.envalys.mr-projection-tools",
+  "version": "1.0.0",
+  "displayName": "Mixed Reality Projection Tools",
+  "description": "A collection of tools for projecting a VR environment onto a physical model or displaying it on a screen.",
+  "author": {
+    "name": "Envalys"
+  },
+  "dependencies": {
+    "com.unity.xr.interaction.toolkit": "2.5.4",
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "samples": [
+    {
+      "displayName": "Prefabs",
+      "description": "",
+      "path": "Samples~/Prefabs"
+    }
+  ]
+}
