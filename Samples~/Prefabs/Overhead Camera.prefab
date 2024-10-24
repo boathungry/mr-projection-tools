@@ -559,6 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb23ff8e0220c3d4eb666c4ce9a919d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopDownCamera: {fileID: 0}
+  TopDownCamera: {fileID: 80938505269168444}
   MeasuringStick: {fileID: 5008140420766796763}
   MetersDisplayed: {fileID: 1644591342689482377}
