@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class RotateCompass : MonoBehaviour
 {
-    public GameObject rotationOffset;
+    [Range(0, 360)]
+    public float rotationOffset = 0;
     public RectTransform compass;
     // Start is called before the first frame update
     void Start()
     {
-        float sceneRotation = this.rotationOffset.transform.eulerAngles.y;
+        float sceneRotation = 360 - rotationOffset;
         float compassRotation = compass.rotation.z;
         print("sceneRotation: " + sceneRotation);
         print("compassRotation: " + compassRotation);
