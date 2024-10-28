@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 3100386812103720251}
-  openMenu: {fileID: -3235849464325842248, guid: c348712bda248c246b8c49b3db54643f,
+  openMenu: {fileID: 7306803741945589566, guid: edacb446b59c13b43b484b9886786c7a,
     type: 3}
 --- !u!1 &3242412058940423203
 GameObject:
@@ -830,7 +830,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2147483648
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_ConeCastAngle: 6
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 1048576
+    m_Bits: 2147483648
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
   m_HitClosestOnly: 0

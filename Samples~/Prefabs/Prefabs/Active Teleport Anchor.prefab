@@ -91,12 +91,12 @@ PrefabInstance:
     - target: {fileID: 3449784919008568370, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
       propertyPath: m_Name
-      value: Teleport Anchor Variant
+      value: Active Teleport Anchor
       objectReference: {fileID: 0}
     - target: {fileID: 3449784919008568370, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
       propertyPath: m_Layer
-      value: 20
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4368389211439169982, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
@@ -106,12 +106,12 @@ PrefabInstance:
     - target: {fileID: 4534037785371708399, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
       propertyPath: m_Layer
-      value: 20
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6902949822820426289, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
       propertyPath: m_Layer
-      value: 20
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 8164705571879959090, guid: fad94b617f0540568dbf4c9c4011248c,
         type: 3}
