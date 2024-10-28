@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 8519720230780985544}
   - component: {fileID: 5914305052414765046}
   m_Layer: 0
-  m_Name: TopDownSprites
+  m_Name: Top Down Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7771165048029627100}
   - component: {fileID: 4604851908837308792}
   - component: {fileID: 8303450796635541016}
-  - component: {fileID: 379298996262596228}
   m_Layer: 5
   m_Name: Dashboard
   m_TagString: Untagged
@@ -125,20 +124,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &379298996262596228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052347013407790288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5dd87b41ebe55541b5ae7d74ee7cf8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 1052347013407790288}
-  openMenu: {fileID: 0}
 --- !u!1 &1352778475973086116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1360,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -1618,7 +1603,7 @@ GameObject:
   - component: {fileID: 2563591499958765491}
   - component: {fileID: 4767387666091266927}
   m_Layer: 0
-  m_Name: MenuConstraint
+  m_Name: Menu Constraint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1632,8 +1617,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9213477914542375699}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.4399986, y: -2.9, z: -13.979996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1694,7 +1679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 7635943186149633549}
-  openMenu: {fileID: -3235849464325842248, guid: c348712bda248c246b8c49b3db54643f,
+  openMenu: {fileID: 7306803741945589566, guid: edacb446b59c13b43b484b9886786c7a,
     type: 3}
 --- !u!1 &9216952429408464861
 GameObject:

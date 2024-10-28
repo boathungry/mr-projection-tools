@@ -265,7 +265,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -389,8 +389,11 @@ MonoBehaviour:
   followAngleThreshold: 45
   houseToggleSound: {fileID: 2742603685994998011}
   toggleGameObject: {fileID: 0}
+  isLightSensitive: 0
+  directionalLight: {fileID: 0}
   onMaterial: {fileID: 2100000, guid: eaeb409f9ebe7c842bb8aadfeea7ad7a, type: 2}
   offMaterial: {fileID: 2100000, guid: cabd0f37399e8264c809554e4aaae4df, type: 2}
+  inactiveMaterial: {fileID: 0}
 --- !u!114 &7018414315359759069
 MonoBehaviour:
   m_ObjectHideFlags: 0
