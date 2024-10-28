@@ -1,0 +1,45 @@
+{
+    "name": "XRI Additional Input Actions",
+    "maps": [
+        {
+            "name": "XRI LeftHand Additional",
+            "id": "c57ff8c4-08ff-49d4-83a1-06d72b633d15",
+            "actions": [
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "a1db5ecf-c362-45c6-b719-9e7f9af547f8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4507a23e-c23c-4332-9081-7977a8f2e509",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93ee6c94-6c8b-44e3-af47-207ae25ca6ad",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
