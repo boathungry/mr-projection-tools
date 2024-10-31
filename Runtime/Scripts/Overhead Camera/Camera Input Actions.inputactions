@@ -1,8 +1,8 @@
 {
-    "name": "CameraInput",
+    "name": "Camera Input Actions",
     "maps": [
         {
-            "name": "Bird's Eye Camera",
+            "name": "OverheadCamera",
             "id": "aaa0c972-9907-46cf-9738-9d49de18b4ca",
             "actions": [
                 {
@@ -153,17 +153,6 @@
                 },
                 {
                     "name": "",
-                    "id": "6a0ea547-8101-42b9-92d7-57f0f31ab06a",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Reset",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ef28b7c6-d5e8-4bd4-92df-0091e44739bb",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -177,17 +166,6 @@
                     "name": "",
                     "id": "5589948c-04b2-4a86-aa31-665ae7659c3a",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Swap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "20369159-02e5-46e2-999f-3e6439cc6f03",
-                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

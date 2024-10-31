@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class BirdsEyeInputManager : MonoBehaviour
+public class CameraInputManager : MonoBehaviour
 {
     public Camera orthographicCamera;
-    private CameraInput camInput;
+    private CameraInputActions camInput;
     private InputAction zoomAction;
     private InputAction moveAction;
     private InputAction resetAction;
@@ -14,8 +14,8 @@ public class BirdsEyeInputManager : MonoBehaviour
     private InputAction swapAction;
     private Camera[] allCams;
     private bool multipleDisplaysActive;
-    private float highPriority = 10;
-    private float lowPriority = 1;
+    private readonly float highPriority = 10;
+    private readonly float lowPriority = 1;
 
     private string MAINCAM = "MainCamera";
 
@@ -23,16 +23,16 @@ public class BirdsEyeInputManager : MonoBehaviour
     void Start()
     {
         allCams = Camera.allCameras;
-        camInput = new CameraInput();
-        zoomAction = camInput.BirdsEyeCamera.Zoom;
+        camInput = new CameraInputActions();
+        zoomAction = camInput.OverheadCamera.Zoom;
         zoomAction.Enable();
-        moveAction = camInput.BirdsEyeCamera.Move;
+        moveAction = camInput.OverheadCamera.Move;
         moveAction.Enable();
-        resetAction = camInput.BirdsEyeCamera.Reset;
+        resetAction = camInput.OverheadCamera.Reset;
         resetAction.Enable();
-        exitAction = camInput.BirdsEyeCamera.Exit;
+        exitAction = camInput.OverheadCamera.Exit;
         exitAction.Enable();
-        swapAction = camInput.BirdsEyeCamera.Swap;
+        swapAction = camInput.OverheadCamera.Swap;
         swapAction.Enable();
 
         if (!orthographicCamera.orthographic)
