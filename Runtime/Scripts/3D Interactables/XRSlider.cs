@@ -33,9 +33,9 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("Events to trigger when the slider is moved")]
         ValueChangeEvent m_OnValueChange = new ValueChangeEvent();
 
-        [SerializeField]
-        [Tooltip("The Directional Light that will be controlled by the slider")]
-        Light m_DirectionalLight = null;
+        //[SerializeField]
+        //[Tooltip("The Directional Light that will be controlled by the slider")]
+        //Light m_DirectionalLight = null;
 
         IXRSelectInteractor m_Interactor;
 
@@ -98,7 +98,7 @@ namespace UnityEngine.XR.Content.Interaction
             {
                 if (isSelected)
                 {
-                    Debug.Log($"Processing interactable. Interactor: {m_Interactor.transform.name}");
+                    // Debug.Log($"Processing interactable. Interactor: {m_Interactor.transform.name}");
                     UpdateSliderPosition();
                 }
             }
@@ -127,12 +127,12 @@ namespace UnityEngine.XR.Content.Interaction
         {
             m_Value = value;
             m_OnValueChange.Invoke(m_Value);
-            if (m_DirectionalLight != null)
-            {
-                float rotationAngle = Mathf.Lerp(0f, 180f, value); // Map slider value to rotation angle
+            //if (m_DirectionalLight != null)
+            //{
+            //    float rotationAngle = Mathf.Lerp(0f, 180f, value); // Map slider value to rotation angle
 
-                m_DirectionalLight.transform.rotation = Quaternion.Euler(rotationAngle, 0f, 0f);
-            }
+            //    m_DirectionalLight.transform.rotation = Quaternion.Euler(rotationAngle, 0f, 0f);
+            //}
         }
 
         void OnDrawGizmosSelected()

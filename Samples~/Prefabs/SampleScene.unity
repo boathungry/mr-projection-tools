@@ -671,6 +671,60 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1441688990}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1429224831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1429224833}
+  - component: {fileID: 1429224832}
+  m_Layer: 0
+  m_Name: SunManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1429224832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429224831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dc6c74e7751d142adc68c7d028de12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  latitude: 64
+  longitude: -22
+  date:
+    day: 11
+    month: 10
+    year: 1996
+  time:
+    hour: 12
+    minute: 30
+  sun: {fileID: 410087040}
+--- !u!4 &1429224833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429224831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.639239, y: 7.824153, z: -0.39243507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1441688990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,6 +1074,41 @@ PrefabInstance:
       propertyPath: m_DirectionalLight
       value: 
       objectReference: {fileID: 410087040}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1429224832}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDayFraction
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MRProjectionTools.SunControl, Envalys.MrProjectionTools.SunPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5673574088092709284, guid: ff49758441af8b7499df2229db70f6fc,
+        type: 3}
+      propertyPath: m_OnValueChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8576724702581267524, guid: ff49758441af8b7499df2229db70f6fc,
         type: 3}
       propertyPath: m_Sources.Array.data[0].sourceTransform
@@ -1049,3 +1138,4 @@ SceneRoots:
   - {fileID: 1534657514}
   - {fileID: 259810604}
   - {fileID: 1761906379}
+  - {fileID: 1429224833}

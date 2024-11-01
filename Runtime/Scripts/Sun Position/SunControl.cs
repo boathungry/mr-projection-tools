@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
 
 namespace MRProjectionTools
 {
@@ -33,10 +30,39 @@ namespace MRProjectionTools
         private SunInput sunInput;
         private InputAction moveSun;
 
+        /// <summary>
+        /// Sets the new date and time, then updates the sun's position based on it.
+        /// </summary>
+        /// <param name="newDateTime"></param>
+        void SetDateTime(DateTime newDateTime)
+        {
+            dateTime = newDateTime;
+            SetSunPosition(dateTime);
+        }
+
+        /// <summary>
+        /// Linearly interpolates the time of day between 00:00 and 23:59 based on the fraction provided.
+        /// Updates sun position.
+        /// Accepts values from 0 to 1.
+        /// </summary>
+        /// <param name="frac">A value between 0 and 1 (inclusive).</param>
+        public void SetDayFraction(float frac)
+        {
+            float startMinutes = 0;
+            float endMinutes = 60 * 23 + 59;
+            float currMinutesTotal = (long)Mathf.Lerp(startMinutes, endMinutes, frac);
+            float currMinutes = currMinutesTotal % 60;
+            int currHours = Mathf.RoundToInt((currMinutesTotal - currMinutes) / 60);
+            SetDateTime(new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, currHours, Mathf.RoundToInt(currMinutes), 0));
+        }
+
+        /// <summary>
+        /// Update the sun's position based on the date and time.
+        /// </summary>
+        /// <param name="dateTime"></param>
         void SetSunPosition(DateTime dateTime)
         {
             Vector2 sunPos = sunCalc.GetSunPosition(dateTime, latitude, longitude);
-            Debug.Log("Azimuth: " + sunPos.x + "| Altitude: " + sunPos.y);
             sun.transform.eulerAngles = new Vector3(sunPos.y, sunPos.x);
         }
         
@@ -50,7 +76,6 @@ namespace MRProjectionTools
             sunInput = new SunInput();
             moveSun = sunInput.Sun.Move;
             moveSun.Enable();
-            Debug.Log(moveSun.enabled);
         }
 
         // Update is called once per frame
@@ -58,9 +83,7 @@ namespace MRProjectionTools
         {
             if (moveSun.IsPressed())
             {
-                dateTime = dateTime.AddMinutes(moveSun.ReadValue<float>());
-                SetSunPosition(dateTime);
-                Debug.Log("Time:" + dateTime.ToShortTimeString() + "| Altitude: " + sun.transform.eulerAngles.y);
+                SetDateTime(dateTime.AddMinutes(moveSun.ReadValue<float>()));
             }
         }
     }
