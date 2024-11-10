@@ -24,6 +24,9 @@ namespace MRProjectionTools
         public StartingDate date;
         public StartingTime time;
         public Light sun;
+        public GameObject compass;
+        [Range(0, 360)]
+        public float rotationOffset = 0;
 
         private DateTime dateTime;
         private SunCalculations sunCalc;
@@ -38,6 +41,18 @@ namespace MRProjectionTools
         {
             dateTime = newDateTime;
             SetSunPosition(dateTime);
+        }
+
+        private float GetRotationOffset()
+        {
+            if (compass)
+            {
+                return compass.transform.rotation.eulerAngles.y;
+            }
+            else
+            {
+                return rotationOffset;
+            }
         }
 
         /// <summary>
@@ -63,7 +78,7 @@ namespace MRProjectionTools
         void SetSunPosition(DateTime dateTime)
         {
             Vector2 sunPos = sunCalc.GetSunPosition(dateTime, latitude, longitude);
-            sun.transform.eulerAngles = new Vector3(sunPos.y, sunPos.x);
+            sun.transform.eulerAngles = new Vector3(sunPos.y, sunPos.x + GetRotationOffset());
         }
         
         // Start is called before the first frame update
