@@ -19,7 +19,7 @@ This package has some pre-made assets to help set up Envalys's MR projection wor
 
 #### VR setup
 
-To use the package, Unity must be set up to use VR. Follow the steps below to do so:
+To use many of the features in this package, Unity must be set up to use VR. Follow the steps below to do so:
 
 1. In Unity's Project Settings (Edit > Project Settings), navigate to the "Player" tab. In the "Other settings" section of this tab, scroll down until you reach "Script Compilation". In the Scripting Define Symbols, add two sections and paste "USE_INPUT_SYSTEM_POSE_CONTROL" and "USE_STICK_CONTROL_THUMBSTICKS" into them. Click "Apply".
 2. Still in the Project Settings window, go to the "XR Plug-in Management" tab. There, check the box next to "OpenXR" in the "Plug-in Providers" section.

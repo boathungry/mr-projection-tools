@@ -32,6 +32,7 @@ namespace MRProjectionTools
         private SunCalculations sunCalc;
         private SunInput sunInput;
         private InputAction moveSun;
+        private InputAction setDate;
 
         /// <summary>
         /// Sets the new date and time, then updates the sun's position based on it.
@@ -91,6 +92,9 @@ namespace MRProjectionTools
             sunInput = new SunInput();
             moveSun = sunInput.Sun.Move;
             moveSun.Enable();
+
+            setDate = sunInput.Sun.SetDate;
+            setDate.Enable();
         }
 
         // Update is called once per frame

@@ -35,6 +35,15 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Set Date"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb50b3f9-f3d0-415c-9a6d-47646df56a11"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -70,6 +79,17 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ada32ee-a7cd-4aea-9b13-b78d55b0dd74"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Set Date"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -79,6 +99,7 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
         // Sun
         m_Sun = asset.FindActionMap("Sun", throwIfNotFound: true);
         m_Sun_Move = m_Sun.FindAction("Move", throwIfNotFound: true);
+        m_Sun_SetDate = m_Sun.FindAction("Set Date", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,11 +162,13 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Sun;
     private List<ISunActions> m_SunActionsCallbackInterfaces = new List<ISunActions>();
     private readonly InputAction m_Sun_Move;
+    private readonly InputAction m_Sun_SetDate;
     public struct SunActions
     {
         private @SunInput m_Wrapper;
         public SunActions(@SunInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Sun_Move;
+        public InputAction @SetDate => m_Wrapper.m_Sun_SetDate;
         public InputActionMap Get() { return m_Wrapper.m_Sun; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -158,6 +181,9 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @SetDate.started += instance.OnSetDate;
+            @SetDate.performed += instance.OnSetDate;
+            @SetDate.canceled += instance.OnSetDate;
         }
 
         private void UnregisterCallbacks(ISunActions instance)
@@ -165,6 +191,9 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @SetDate.started -= instance.OnSetDate;
+            @SetDate.performed -= instance.OnSetDate;
+            @SetDate.canceled -= instance.OnSetDate;
         }
 
         public void RemoveCallbacks(ISunActions instance)
@@ -185,5 +214,6 @@ public partial class @SunInput: IInputActionCollection2, IDisposable
     public interface ISunActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnSetDate(InputAction.CallbackContext context);
     }
 }
